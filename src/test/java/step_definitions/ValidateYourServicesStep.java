@@ -15,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import utilities.ReadConfigFiles;
 
-public class ValidateYourServices {
+public class ValidateYourServicesStep {
     private static final By clickOnSign = By.xpath("//*[@id=\"login-button\"]/button/span");
     private static final By Username = By.id("cc-username");
     private static final By Password = By.id("cc-user-password");
@@ -25,15 +25,15 @@ public class ValidateYourServices {
     private static final By ViewPlanDetails = By.xpath("//span[contains(text(),'View Plan Details')]");
     private static final By HomePhone = By.xpath("//*[@id=\"voice-tab-np\"]"); //*[@id="card-ele-17"]/div[3]/kite-button[1]/button/span
     private static final By ShopPhones = By.xpath("//span[contains(text(),'Shop Phones')]");
-    private static final By TV = By.xpath("//*[@id='tv-tab']");
+    private static final By TV = By.xpath("//button[@id='tv-tab']");
     private static final By ViewChannelLineup = By.xpath("//*[contains(text(),'View Channel Lineup')]");
     private static final By Mobile = By.xpath("//*[@id='mobile-tab-np']");
     private static final By SeeMyDeals = By.xpath("//*[contains(text(),'See My Deals')]");
     private static final By Billing = By.xpath("//spectrum-header/div[1]/div[2]/spectrum-local-nav[1]/div[1]/div[1]/spectrum-nav-item[2]/div[1]/a[1]/span[1]");
     private static final By PaymentMethods = By.xpath("//button[@id='paymentMethodsTab']");
-    private static final By AddPaymentMethod = By.xpath("//button[@id='add-payment-method-btn']");
+    private static final By AddPaymentMethod = By.cssSelector("#add-payment-method-btn");
 
-    private static Logger LOGGER = LogManager.getLogger(ValidateYourServices.class);
+    private static Logger LOGGER = LogManager.getLogger(ValidateYourServicesStep.class);
     WebDriver driver;
     @Given("^user is on the spectrum home page$")
     public void user_is_on_the_spectrum_home_page() {

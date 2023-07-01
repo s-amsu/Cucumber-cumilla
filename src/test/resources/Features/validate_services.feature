@@ -1,3 +1,4 @@
+@positive_test
 Feature: Test Your Services options
 
   Scenario: Check validate Internet

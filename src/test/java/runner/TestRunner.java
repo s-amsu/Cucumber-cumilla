@@ -8,9 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = {"step_definitions"},
-        plugin = {"pretty", "summary", "html:target/CucumberReports/reports.html"},
-       publish = true
+        plugin = {"pretty", "summary", "json:target/cucumber-reports/cucumber-html-reports/report.json",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber-reports"},
+        snippets = CucumberOptions.SnippetType.CAMELCASE
+         //plugin = {"pretty", "summary", "html:target/CucumberReports/reports.html"},
+         //publish = true
 )
-
 public class TestRunner {
 }
